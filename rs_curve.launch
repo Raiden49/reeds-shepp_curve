@@ -1,0 +1,10 @@
+<launch>
+
+    <node name="rs_curve_node" pkg="rs_curve" type="rs_curve_node" output="screen">
+
+        <remap from="rs_curve_node/visualization_marker" to="visualization_marker"/>
+
+    </node>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rs_curve)/rs_rviz.rviz"/>
+
+</launch>
